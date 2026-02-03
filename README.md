@@ -13,20 +13,6 @@ The main goal of this project was to practice working with **Hardware Timers (In
 * **Visual Output:** Displays calculated distance (in cm) on a 16x2 LCD.
 * **Status LEDs:** Controls on-board LEDs using **PWM** (`TIM4`) to indicate system status.
 
-## 🔌 Hardware & Pinout
-
-* **MCU:** STM32F407 (Discovery Board)
-* **Sensor:** HC-SR04
-* **Display:** LCD 1602 (Hitachi HD44780 controller)
-
-| Component | Pin | Function |
-|-----------|-----|----------|
-| **HC-SR04 Trig** | PC6 | TIM3 CH1 (PWM Output) |
-| **HC-SR04 Echo** | PC8 | TIM3 CH3 (Input Capture) |
-| **LCD RS** | PE7 | GPIO Output |
-| **LCD EN** | PE11 | GPIO Output |
-| **LCD D4-D7** | PE12-15 | 4-bit Data Bus |
-
 ## 🚀 How it works
 1. **Trigger:** The MCU sends a 10µs pulse via PWM to the sensor.
 2. **Echo:** The sensor responds with a pulse. The MCU captures the timestamp of the rising and falling edges using Timer Input Capture.
